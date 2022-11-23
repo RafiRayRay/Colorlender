@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>think-twice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ddv2zef.css">
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" sizes="any">
+    <link rel="apple-touch-icon" sizes="any" href="img/favicon.svg">
+
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <div id="logo">
+          <a href="index.html">
+            <img src="img/logo.svg" alt="THINK TWICE">
+          </a>
+      </div>
+      <nav id="main-nav">
+          <ul>
+              <li> <a href="index.html">Home</a> </li>
+              <li> <a href="about.html">About</a> </li>
+              <li> <a href="infos.html">Infos</a> </li>
+              <li> <a href="quiz.html">Quiz</a> </li>
+          </ul>
+      </nav>
+
+    </header>
+
+    <!-- MAIN-SLIDER -->
+    <section id="slidermain">
+      <div class="slide-show-container">
+        <div class="mySlides slider-fade">
+          <img src="img/cash.jpg" style="width:100%" alt="Aufklärung: Die Vernunft macht immer heller, in welchem Dunkel wir leben. von Ludwig Marcuse">
+        </div>
+        <div class="mySlides slider-fade">
+          <img src="img/ufo.jpg" style="width:100%" alt="Wir mögen am Ende aufgeklärt oder unwissend sein, so haben wir dabei so viel gewonnen als verloren. von Heinrich Kleist">
+        </div>
+        <div class="mySlides slider-fade">
+          <img src="img/head.jpg" style="width:100%" alt="Habe Mut dich deines Verstandes zu bedienen. von Immanuel Kant">
+        </div>
+      </div>
+      <br>
+      <div id="dots" style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- INFORMIERE DICH HIER -->
+
+    <section id="informiere">
+      <hr id="slider-line">
+      <h2>Informiere dich hier.</h2>
+      <div id="informiere-graphics">
+        <div id="informiere-graphics-text">
+          <p> Du wolltest schon immer mal wissen, was genau Verschwörungstheorien sind und wie du sie erkennen kannst? Dann findest du eine ausfühliche Erklärung in unserem digitalen Lehrbuch der Verschwörungstheorien. Hier erfährst du wodurch Verschwörungstheorien zustande kommen, gegen wen sie sich richten oder auch genaue Anzeichen, um sie zu entlarven. Klicke rechts auf das Buch, um zu unserem Lehrbuch zu gelangen.
+            <br>
+            <br>
+            <br>
+            Du brauchst einen Faktencheck zu verschiedenen Verschwörungstheorien, ohne selbst viel recherchieren zu müssen? Dann schau dich in unserer digitalen Enzoklopädie der Verschwörungstheorien um. Diese behandelt verschiedene Verschwörungstheorien, erfasst ihre Herkunft und den Wahrheitsfaktor. Natürlich ist alles Think-twice-approved und 100% sicher. Hier findest du keine Fake-News, sondern die nackte Wahrheit. Klicke rechts auf das Glühbirne, um zu unserer Enzyklopädie zu gelangen.
+          </p>
+          <h3>Discover the truth. Think twice.</h3>
+        </div>
+        <div id="informiere-graphics-image">
+          <ul>
+            <li>
+              <a href="lehrbuch.html"><img src="img/buch.svg" alt="Hier findest du unser Lehrbuch."></a>
+            </li>
+            <li>
+              <a href="enzyklopaedie.html"><img src="img/gluehbirne.svg" alt="Hier findest du unsere Enzyklopädie."></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- MACH DAS QUIZ-->
+    <section class="graphics">
+      <h1>Think twice.</h1>
+      <h3>Mach jetzt das Quiz und finde heraus, was du noch lernen kannst.</h3>
+      <div class="graphics">
+          <a href="quiz.html"><img src="img/quizbutton.png" alt="Hier kommst du zum Quiz."></a>
+          <div id="graphics-text">
+            <p> „Corona ist ein Mittel des Staats, um uns alle in unseren Grundrechten einzuschränken.“ „Die Mondlandung wurde von Amerika inszeniert und hat nie statt gefunden.“ „Die Regierung besteht nur aus Eidechsenmenschen!“
+So oder so ähnlich hört man es auf den Straßen bei Protesten der Querdenker:innen. Verschwörungstheorien sind derzeit in aller Munde. Die Gesellschaft ist in zwei Teile geteilt, die, die daran glauben und die, die es nicht tun, aber mit wachsender Sorge die Situation betrachten.
+Aber was ist eigentlich wahr und was falsch an diesen Aussagen der Verschwörungstheoretiker:innen? Think Twice beschäftigt sich genau mit dieser Frage. Unsere Organisation möchte aufklären, informieren und Menschen dazu animieren Gesagtes zu hinterfragen. Wir haben eine Enzyklopädie der Verschwörungstheorien erschaffen, um diese Informationen möglichst zugänglich für alle zu machen. Nie zuvor war es so wichtiger, Menschen eine seriöse Quelle für Informationen zu geben. Im Zeitalter des Internets, ist es fast unmöglich solide Fakten zu finden, auf welche man sich verlassen kann. Wir wollen das ändern!
+Discover the truth! Think twice!</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- SCRIPT -->
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 6000);
+      }
+    </script>
+
+    <!--FOOTER -->
+    <footer>
+      <hr>
+      <p>2022 &copy; | Femke Wöhler & Dario Catena | Universität Bremen |
+        <a href="impressum.html">Impressum</a>
+      </p>
+    </footer>
+  </body>
+</html>
