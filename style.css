@@ -1,8 +1,9 @@
-html, body {margin: 0px; padding: 0px; height: 100%; text-align: center; background-color: #262626;}
-section {background-color: #262626;}
+html, body {margin: 0px; padding: 0px; height: 100%; text-align: center; background-color: #FFFFFF;}
+section {background-color: #FFFFFF;}
 a {text-decoration: none;}
 li {list-style-type: none;}
-h1,h2,h3,a,p {font-family: 'Coolvetica', sans-serif; color: #262626;}
+h1,h2,h3,a,p {font-family: 'Cardo', sans-serif; color: #9033D4;}
+a,p {font-family: 'Montserrat', sans-serif; color: #262626;}
 h1 {font-weight: 700; text-transform: uppercase; font-size: 70px; padding-top: 5%; margin-bottom: 20px;}
 h2 {font-weight: 700; text-transform: uppercase; font-size: 50px; padding-top: 5%; margin-bottom: 20px;}
 h3 {font-weight: 500; font-size: 20px; padding-top: 20px; padding-top: 20px; margin-bottom: 20px;}
@@ -11,7 +12,7 @@ p {font-weight: 300; font-size: 16px;}
 hr {
   width: 100%;
   height: 5px;
-  background: #797ef3;
+  background: #A6A6A6;
   border: 0px;
   margin: 0;
 }
@@ -30,10 +31,17 @@ hr {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #262626;
+  background-color: #FFFFFF;
+}
+
+#line hr{
+  width: 100%;
+  height: 5px;
+  background: #A6A6A6;
+  border: 0px;
+  margin: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  opacity: 0.75;
 }
 
 #logo {
@@ -63,7 +71,7 @@ hr {
   float: right;
 }
 #header nav {
-  margin: 20px 100px 0 0;
+  margin: 10px 100px 0 0;
 }
 
 #header nav ul li, #header-fixed nav ul li {
@@ -72,109 +80,37 @@ hr {
 }
 
 #header nav ul li a, #header-fixed nav ul li a {
-  color: #ffffff;
+  color: #262626;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 500;
 }
 
 #header nav ul li a:hover {
-  color: #797ef3;
+  color: #127475;
 }
 
-/* SLIDER *****************+**/
-
-#slidermain {
-  min-width: 100%;
-  margin: 0 0 0 0;
-}
-
-* {box-sizing: border-box;}
-.mySlides {display: none}
-.slideshow-container img {vertical-align: middle}
-
-.slideshow-container {
-  min-width: 100%;
-  position: relative;
-  margin-left: 0px auto 0px auto;
-}
-
-#dots {
-  margin-top: -60px;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 0px 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.slider-fade {
-  -webkit-animation-name: fadeIn;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;}
-
-.active {
-  background-color: #717171;
-}
-
-@-webkit-keyframes slider-fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes slider-fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 /* INFORMIERE DICH JETZT *****************+**/
 
-#informiere {
-  background-color: #ffffff;
+#uber_uns {
+  background-color: #FFFFFF ;
   min-height: 650px;
   padding: 0;
 }
 
-#informiere-graphics {
+#uber_uns-body {
   width: 950px;
   margin: 0 auto 0 auto;
 }
 
-#informiere-graphics-text {
+#uber_uns-body-text {
   float: left;
   width: 60%;
 }
 
-#informiere-graphics-text p {
+#uber_uns-body-text p {
   text-align: left;
   line-height: 1.6;
-}
-
-#informiere-graphics-image ul li {
-  float: right;
-  width: 35%;
-}
-
-#informiere-graphics-image ul li img {
-  width: 200px;
-  margin-bottom: 20px;
-  box-shadow: 0;
-  transition: box-shadow 1s;
-  transition: 0.35ms;
-  border-radius: 30px;
-}
-
-#informiere-graphics-image img:hover {
-  box-shadow: 0 0 20px #262626;
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
 }
 
 /* MACH DAS QUIZ *****************+**/
@@ -289,44 +225,6 @@ hr {
   margin-top: 20px;
   color: white;
   line-height: 1.6;
-}
-
-/* SPOT *****************+**/
-
-#audio {
-  background-color: #ffffff;
-  padding-top: 0px;
-  width: 100%;
-  margin: 0 auto 0 auto;
-}
-
-#audio-text p{
-  text-align: left;
-  padding-top: 3%;
-  padding-left: 18%;
-  width: 70%;
-}
-
-#audio-list {
-  width: 100%;
-}
-
-#audio-list ul {
-  background-color: #fff;
-  width: 80%;
-  padding-top: 5%;
-  padding-bottom: 7%;
-}
-
-#audio-list li {
-  display: inline-block;
-}
-
-#audio-list ul li audio{
-  margin-left: 18%;
-  height: 50px;
-  border: solid #797ef3;
-  border-radius: 20px;
 }
 
 /* INFOS *****************+**/
@@ -765,8 +663,8 @@ hr {
 /* FOOTER *****************+**/
 footer {
   width: 100%;
-  height: 50px;
-  background-color: #c8cafb;
+  height: 70px;
+  background-color: #C2C2C2;
   padding-left: 0px;
 }
 footer p {
