@@ -1,5 +1,12 @@
 html, body {margin: 0px; padding: 0px; height: 100%; text-align: center; background-color: #FFFFFF;}
-section {background-color: #FFFFFF;}
+section {
+  width: 100%;
+  min-height:120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
 a {text-decoration: none;}
 li {list-style-type: none;}
 h1,h2,h3,a,p {font-family: 'Cardo', sans-serif; color: #9033D4;}
@@ -90,6 +97,37 @@ hr {
   color: #127475;
 }
 
+#swiper {
+  position:relative;
+  width: 100%;
+  height: 100%;
+  padding-top:50px;
+  padding-bottom: 50px;
+}
+
+#swiper-slide {
+  background: #262626;
+  background-position: center;
+  background-size: cover;
+  width:350px;
+  height:300px;
+}
+
+#swiper-slide img {  
+  width: 100%;
+  height: 100%;
+}
+
+#swiper-image{
+  width:100%;
+  height:100%
+}
+#imagesbox {
+  width:100%;
+  padding:40px;
+  padding-top:90px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+} 
 /* ÜBER UNS*****************+**/
 
 #uber_uns {
