@@ -31,21 +31,64 @@
 
 <!--BODY -->
 <section id="wetter_in_bremen">
-  <div style="text-align: left;">
-    <img src="img/basic2.png" alt="Titelbasic">
-  </div>
-</section>
-<section id="slider">
+    <!-- Slideshow container -->
+  <div class="slideshow-container">
 
-  <div id="uber_uns-body">
-    <div id="uber_uns-body-text">
-      <p>Colorlender ist eine Webapp die hilft das aktuelle Wetter anschaulich und leichtverständlich mit den Vorjahren zu vergleichen. Es wird immer der aktuelle Colorlender angezeigt und daneben als Vergleich dazu kann man sich den Colorlender aus einem anderen Jahr daneben anzeigen lassen.
-Der Colorlender gibt jedem Tag anhand der Durchschnittstemperatur eine Farbe die vorher anhand einer Skala ausgewählt wird. Kalt blau, warm rot.
-<br> <br>Weil Farben leichter zu vergleichen sind als langweilige Tabellen, ist der Colorlender perfekt geeignet für jüngere Menschen, den Klimawandel leicht vergleichbar zu machen.
-Man kann auch einige Jahre in die Zukunft springen und sich anschauen, wie Colorlender in der Zukunft aussen werden, wenn die Prognosen eintreffen.</p>
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="img/example_1.jpg" style="width:40%">
+      <div class="text">1976</div>
     </div>
+
+    <div class="mySlides fade">
+      <img src="img/example_2.jpg" style="width:40%">
+      <div class="text">1977</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img/example_3.jpg" style="width:40%">
+      <div class="text">1978</div>
+    </div>
+    <div id="prev_next">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Next and previous buttons -->
   </div>
-</section>
+  <br>
+
+<script type="text/javascript">
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
     <!--FOOTER -->
     <footer>
       <hr>

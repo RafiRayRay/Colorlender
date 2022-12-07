@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<section id="slidermain">
+      <div class="slide-show-container">
+        <div class="mySlides slider-fade">
+          <img src="img/example_1.jpg" style="width:20%" alt="Aufklärung: Die Vernunft macht immer heller, in welchem Dunkel wir leben. von Ludwig Marcuse">
+        </div>
+        <div class="mySlides slider-fade">
+          <img src="img/example_2.jpg" style="width:20%" alt="Wir mögen am Ende aufgeklärt oder unwissend sein, so haben wir dabei so viel gewonnen als verloren. von Heinrich Kleist">
+        </div>
+        <div class="mySlides slider-fade">
+          <img src="img/example_3.jpg" style="width:20%" >
+        </div>
+      </div>
+      <br>
+      <div id="dots" style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 6000);
+      }
+    </script>
+    </html>
