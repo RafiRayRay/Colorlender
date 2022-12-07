@@ -83,6 +83,7 @@ hr {
 
 #wetter_in_bremen{
   height: 700px;
+  width: 100%;
   padding-top: 100px;
   background-color: rgb(33,122,174);
 }
@@ -92,11 +93,10 @@ hr {
 
 /* Slideshow container */
 .slideshow-container {
-
   float: left;
   width: 50%;
   position: relative;
-  margin: 30px auto 0 auto;
+  margin: 50px auto 0 auto;
 }
 
 /* Hide the images by default */
@@ -132,7 +132,7 @@ hr {
   font-family: 'Montserrat';
   font-size: 40px;
   position: absolute;
-  margin-top: 20px;
+  margin-top: 50px;
   width: 100%;
   text-align: center;
 }
@@ -147,11 +147,28 @@ hr {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* CURRENT *****************+**/
+
+.current {
+  float: left;
+  width: 50%;
+  padding-right: 5%;
+  position: relative;
+  margin-top: 30px;
+}
+
 /* INTRODUCTION*****************+**/
 
 #erklarung{
   min-height: 350px;
-  margin: 599px 0 0 0;
+}
+
+#erklarung-bild{
+  float: left;
+  width: 20%;
+  padding-right: 20%;
+  border-radius: 25px;
 }
 
 #erklarung-bild img{
@@ -159,11 +176,19 @@ hr {
   padding-left: 0;
 }
 
-#erklarung-text p{
-  float: right;
-  text-align: right;
-  background-color: black;
+#erklarung-text, #erklarung-text2{
+  float: left;
+  width: 35%;
+  height: 500px;
+  padding-left: 5%;
 }
+
+#erklarung-text, #erklarung-text2 p{
+  padding-top: 20px;
+  float: left;
+  text-align: left;
+}
+
 
 /* ÜBER UNS*****************+**/
 
