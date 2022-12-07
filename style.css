@@ -1,16 +1,8 @@
-html, body {margin: 0px; padding: 0px; height: 100%; text-align: center; background-color: #FFFFFF;}
-section {
-  width: 100%;
-  min-height:120vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-}
+html, body {margin: 0px; padding: 0px; height: 100%; text-align: center; background-color: rgb(240,235,224);}
 a {text-decoration: none;}
 li {list-style-type: none;}
-h1,h2,h3,a {font-family: 'Cardo', sans-serif; color: #9033D4;}
-p {font-family: 'Montserrat', sans-serif; color: #262626;}
+h1,h2,h3,a {font-family: 'Cardo', sans-serif; color: rgb(33,122,174);}
+p {font-family: 'Montserrat', sans-serif; color: rgb(111,111,109)}
 h1 {font-weight: 700; font-size: 70px; padding-top: 5%; margin-bottom: 20px;}
 h2 {font-weight: 700; font-size: 50px; padding-top: 5%; margin-bottom: 20px;}
 h3 {font-weight: 500; font-size: 20px; padding-top: 20px; padding-top: 20px; margin-bottom: 20px;}
@@ -19,7 +11,7 @@ p {font-weight: 300; font-size: 16px;}
 hr {
   width: 100%;
   height: 5px;
-  background: #A6A6A6;
+  background: rgb(240,235,224);
   border: 0px;
   margin: 0;
 }
@@ -38,13 +30,13 @@ hr {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: rgb(240,235,224);
 }
 
 #line hr{
   width: 100%;
   height: 5px;
-  background: #A6A6A6;
+  background: rgb(111,111,109);
   border: 0px;
   margin: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -88,63 +80,31 @@ hr {
 }
 
 #header nav ul li a, #header-fixed nav ul li a {
-  color: #262626;
+  color: rgb(111,111,109);
   font-size: 25px;
   font-weight: 500;
 }
 
 #header nav ul li a:hover {
-  color: #127475;
+  color: rgb(33,122,174);
 }
 
-#swiper {
-  position:relative;
-  width: 100%;
-  height: 100%;
-  padding-top:50px;
-  padding-bottom: 50px;
-}
-
-#swiper-slide {
-  background: #262626;
-  background-position: center;
-  background-size: cover;
-  width:350px;
-  height:300px;
-}
-
-#swiper-slide img {
-  width: 100%;
-  height: 100%;
-}
-
-#swiper-image{
-  width:100%;
-  height:100%
-}
-#imagesbox {
-  width:100%;
-  padding:40px;
-  padding-top:90px;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-}
 /* ÜBER UNS*****************+**/
 
 #uber_uns {
-  background-color: #FFFFFF ;
   min-height: 650px;
-  padding: 0;
 }
 
 #uber_uns-body {
   width: 100%;
-  padding-left: 25%;
-  margin: 0 auto 0 auto;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin: auto;
 }
 
 #uber_uns-body-text {
-  float: left;
-  margin-left: 25%;
+  text-align: center;
+  float: center;
   width: 60%;
 }
 
@@ -160,18 +120,20 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #C2C2C2;
+  background-color: rgb(111,111,109);
   padding-left: 0px;
 }
 footer p {
   text-align: left;
+  font-family: 'Cardo';
   font-size: 12px;
   margin: 15px auto 15px 100px;
+  color: rgb(240,235,224);
 }
 
 footer a {
-  font-family: 'Montserrat';
-  color: #262626;
+  font-family: 'Cardo';
+  color: rgb(240,235,224);
 }
 
 footer hr {
