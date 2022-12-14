@@ -243,6 +243,19 @@ background-color: #C9EBFF;
   line-height: 1.6;
 }
 
+/* SHOP *****************+**/
+.shop {
+  float: none;
+  width: 70%;
+  height: 500px;
+  margin: 150px auto 0 auto;
+}
+
+.shop tr{
+  border: 50px;
+  border-color: rgb(33,122,174);
+}
+
 /* FOOTER *****************+**/
 .footer {
   height: 70px;
