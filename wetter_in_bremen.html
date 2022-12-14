@@ -9,8 +9,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" sizes="any">
-    <link rel="apple-touch-icon" sizes="any" href="img/favicon.svg">
     <!-- HEADER -->
     <header id="header">
       <div id="logo">
@@ -24,8 +22,7 @@
             <li> <a href="shop.html">shop</a> </li>
           </ul>
       </nav>
-      <div id= "line">
-        </div>
+      <hr>
     </header>
   </head>
 
@@ -33,34 +30,36 @@
 <!--SLIDER -->
 <section id="wetter_in_bremen">
     <!-- Slideshow container -->
+
   <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <img src="img/example_1.jpg" style="width:35%">
-      <div class="text">1976</div>
+      <img src="img/example_2.jpg" style="width:35%">
     </div>
 
     <div class="mySlides fade">
       <img src="img/example_2.jpg" style="width:35%">
-      <div class="text">1977</div>
     </div>
 
     <div class="mySlides fade">
       <img src="img/example_3.jpg" style="width:35%">
-      <div class="text">1978</div>
     </div>
-    <div class="prev_next">
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="slidecontainer">
+      <h1><span id="demo"></span></h1>
+      <input type="range" min="1970" max="2020" value="50" class="slider" id="myRange">
     </div>
 </div>
-<div class="current fade">
-  <img src="img/example_1.jpg" style="width:50%">
+
+<div class="current">
+  <!-- <img src="img/example_1.jpg" style="width:50%">-->
+  <iframe src="https://editor.p5js.org/RafiRayRay/full/aJhSc1y-M"></iframe>
 </div>
 </section>
+
   <!--INTRODUCTION -->
 <section id=erklarung>
+  <hr>
   <div id="erklarung-bild" style="text-align: left;">
       <img src="img/basic2.png" alt="Basic2">
   </div>
@@ -115,13 +114,23 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+<script type="text/javascript">
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
 
     <!--FOOTER -->
     <footer>
-      <hr>
-      <p>2022 &copy; | Yougin Kim & Ulad Karotki & Rafael Gassmann & Femke Wöhler | Hochschule für Künste Bremen & Universität Bremen |
-        <a href="impressum.html">Impressum</a>
-      </p>
+      <div class="footer">
+<p>2022 &copy; | Yougin Kim & Ulad Karotki & Rafael Gassmann & Femke Wöhler | Hochschule für Künste Bremen & Universität Bremen | <a href="impressum.html">Impressum</a></p>
+      </div>
+
     </footer>
   </body>
 </html>
