@@ -87,6 +87,7 @@ hr {
 
 #wetter_in_bremen{
   height: 900px;
+  width: 100%;
   padding-top: 100px;
   background-color: #FFFFFF;
 }
@@ -122,10 +123,20 @@ hr {
   to {opacity: 1}
 }
 
+/* PAST *****************+**/
+.past {
+  float: left;
+  width: 50%;
+  height: 300px;
+  position: relative;
+  margin: 70px auto 0 auto;
+  padding-left: 15%;
+}
+
 /* CURRENT *****************+**/
 
 .current {
-  float: right;
+  float: left;
   width: 50%;
   height: 300px;
   position: relative;
@@ -244,11 +255,22 @@ background-color: #C9EBFF;
 }
 
 /* SHOP *****************+**/
+#shoptitle {
+  min-height: 250px;
+  padding-bottom: 70px;
+}
+
+#shoptitle img{
+  width: 800px;
+  padding-top: 100px;
+  padding-left: 0;
+}
+
 .shop {
   float: none;
   width: 70%;
   height: 1500px;
-  margin: 150px auto 0 auto;
+  margin: auto auto 0 auto;
 }
 
 .shop tr{
