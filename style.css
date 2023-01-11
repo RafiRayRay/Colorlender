@@ -1,12 +1,13 @@
-html, body {margin: 0px; padding: 0px; height: 100%; text-align: left; background-color: #FFFFFF;}
+html, body {margin: 0px; padding: 0px; height: 100%; text-align: left;}
 a {text-decoration: none;}
 li {list-style-type: none;}
-h1,h2,h3,a {font-family: 'Cardo', sans-serif; color: rgb(33,122,174);}
-p {font-family: 'Montserrat', sans-serif; color: rgb(111,111,109)}
+h1,h2,h3,a {font-family: 'urbane-rounded', sans-serif;, color: rgb(33,122,174); font-style: normal;}
+p {font-family: 'forma-djr-micro', sans-serif; color: rgb(111,111,109)}
 h1 {font-weight: 700; font-size: 70px; padding-top: 5%; margin-bottom: 20px;}
 h2 {font-weight: 700; font-size: 50px; padding-top: 5%; margin-bottom: 20px;}
 h3 {font-weight: 500; font-size: 20px; padding-top: 20px; padding-top: 20px; margin-bottom: 20px;}
 p {font-weight: 300; font-size: 16px;}
+a {font-weight: 300; font-size: 20px;}
 
 hr {
   width: 100%;
@@ -30,11 +31,7 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #C9EBFF;
-}
-
-#header hr{
-  padding-top: 20px;
+ background-color: #F8D7C8;
 }
 
 #logo {
@@ -73,11 +70,6 @@ hr {
   margin-top: 5px;
 }
 
-#header nav ul li a, #header-fixed nav ul li a {
-  color: rgb(111,111,109);
-  font-size: 25px;
-  font-weight: 500;
-}
 
 #header nav ul li a:hover {
   color: rgb(33,122,174);
@@ -89,7 +81,7 @@ hr {
   height: 900px;
   width: 100%;
   padding-top: 100px;
-  background-color: #FFFFFF;
+   background-color: #F8D7C8;
 }
 
 /* SLIDER *****************+**/
@@ -283,7 +275,7 @@ background-color: #C9EBFF;
   height: 70px;
   bottom: 0;
   width: 100%;
-  background-color: rgb(111,111,109);
+  background-color: #F2856D;
 }
 
 .footer p {
@@ -292,9 +284,9 @@ background-color: #C9EBFF;
 margin-right: 25%;
 margin-left: 5%;
 padding-top: 20px;
-  font-family: 'Cardo';
 }
 
 .footer a {
+  font-size: 12px;
   color: #FFFFFF
 }
