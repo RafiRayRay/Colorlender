@@ -5,7 +5,19 @@ let rectWidth = canvasWidth * 0.666666666666666;
 let rectHeight = canvasHeight * 0.75;
 let rectX = (canvasWidth - rectWidth) / 2;
 let rectY = (canvasHeight - rectHeight) / 4;
-
+let start = true;
+let cJan = false;
+let cFeb = false;
+let cMar = false;
+let cApr = false;
+let cMai = false;
+let cJun = false;
+let cJul = false;
+let cAug = false;
+let cSep = false;
+let cOkt = false;
+let cNov = false;
+let cDez = false;
 let button;
 let loaded1 = false;
 let loaded2 = false;
@@ -55,9 +67,9 @@ function setup() {
   createCanvas(canvasWidth, canvasHeight);
   // Erstelle Slider für das Jahr, den Monat und das Datum
   jahrSlider = createSlider(2010, 2022, 2022);
-  jahrSlider.position(width*0.41, height * 0.88);
+  jahrSlider.position(width * 0.41, height * 0.88);
   jahrSlider.style("width", "80px");
-/*
+  /*
   monatSlider = createSlider(01, 12, 1);
   monatSlider.position(width - width * 0.9, height * 0.9);
   monatSlider.style("width", "80px");
@@ -81,7 +93,7 @@ function setup() {
 function buttonPressed() {
   // Ändere den Pfad zur JSON-Datei
   jahr = jahrSlider.value();
-let j=jahr;
+  let j = jahr;
   // m= monat
   t = 15;
 
@@ -169,31 +181,267 @@ function m12(dezember) {
   t12 = dezember.weather[11].temperature;
   loaded12 = true;
 }
+
 function draw() {
-  background(220);
+  background(248, 215, 200);
 
   // Aktualisiere die Werte der Variablen "year", "month" und "date"
   // entsprechend den Werten der Slider
-  
-  
+  print(mouseX, mouseY, start);
+
   jahr = jahrSlider.value();
- /*
+  /*
  monat = monatSlider.value();
   tag = tagSlider.value();
 */
-  drawQuad(); //Die Quadrate (3x4)
+
+  if (start == true) {
+    drawQuad(); //Die Quadrate (3x4)
+  }
 
   //Die Werte von den Slidern
   fill(111);
   textSize(28);
-  text(jahr, width *0.43, height * 0.88);
+  text(jahr, width * 0.43, height * 0.88);
   text(monat, width - width * 0.8, height * 0.91);
   text(tag, width - width * 0.8, height * 0.93);
   print("datum " + j, m, t);
 
-  //drawFläche();                //nur zum testen ob die quadrate richtig angeordnet sind
-}
+  //wenn januar geclickt wird, wird cJan = true und dann if->cJan=true->cJanuar();, ....
+  if (
+    mouseX > 75 &&
+    mouseX < 175 &&
+    mouseY > 35 &&
+    mouseY < 150 &&
+    mouseIsPressed
+  ) {
+    cJan = true;
+  }
+  if (
+    mouseX > 175 &&
+    mouseX < 275 &&
+    mouseY > 35 &&
+    mouseY < 150 &&
+    mouseIsPressed
+  ) {
+    cFeb = true;
+  }
+  if (
+    mouseX > 275 &&
+    mouseX < 375 &&
+    mouseY > 35 &&
+    mouseY < 150 &&
+    mouseIsPressed
+  ) {
+    cMar = true;
+  }
+  if (
+    mouseX > 75 &&
+    mouseX < 175 &&
+    mouseY > 150 &&
+    mouseY < 260 &&
+    mouseIsPressed
+  ) {
+    cApr = true;
+  }
+  if (
+    mouseX > 175 &&
+    mouseX < 275 &&
+    mouseY > 150 &&
+    mouseY < 260 &&
+    mouseIsPressed
+  ) {
+    cMai = true;
+  }
+  if (
+    mouseX > 275 &&
+    mouseX < 375 &&
+    mouseY > 150 &&
+    mouseY < 260 &&
+    mouseIsPressed
+  ) {
+    cJun = true;
+  }
+    if (
+    mouseX > 75 &&
+    mouseX < 175 &&
+    mouseY > 260 &&
+    mouseY < 370 &&
+    mouseIsPressed
+  ) {
+    cJul = true;
+  }
+  if (
+    mouseX > 175 &&
+    mouseX < 275 &&
+    mouseY > 260 &&
+    mouseY < 370 &&
+    mouseIsPressed
+  ) {
+    cAug = true;
+  }
+  if (
+    mouseX > 275 &&
+    mouseX < 375 &&
+    mouseY > 260 &&
+    mouseY < 370 &&
+    mouseIsPressed
+  ) {
+    cSep = true;
+  }
+      if (
+    mouseX > 75 &&
+    mouseX < 175 &&
+    mouseY > 370 &&
+    mouseY < 487 &&
+    mouseIsPressed
+  ) {
+    cOkt = true;
+  }
+  if (
+    mouseX > 175 &&
+    mouseX < 275 &&
+    mouseY > 370 &&
+    mouseY < 487 &&
+    mouseIsPressed
+  ) {
+    cNov = true;
+  }
+  if (
+    mouseX > 275 &&
+    mouseX < 375 &&
+    mouseY > 370 &&
+    mouseY < 487 &&
+    mouseIsPressed
+  ) {
+    cDez = true;
+  }
+  // new window
+  if (cJan == true) {
+    cJanuar();
+  }
+  if (cFeb == true) {
+    cFebruar();
+  }
+  if (cMar == true) {
+    cMarz();
+  }
+  if (cApr == true) {
+    cApril();
+  }
+if (cMai == true) {
+    cMaiM();
+  }
+  if (cJun == true) {
+    cJuni();
+  }
+if (cJul == true) {
+    cJuli();
+  }
+if (cAug == true) {
+    cAugust();
+  }
+  if (cSep == true) {
+    cSeptember();
+  }
+  if (cOkt == true) {
+    cOktober();
+  }
+if (cNov == true) {
+    cNovember();
+  }
+if (cDez == true) {
+    cDezember();
+  }
 
+
+
+
+  //drawFläche();                //nur zum testen ob die quadrate richtig angeordnet sind
+  text("back", 15, 50);
+  if (
+    mouseX > 10 &&
+    mouseX < 50 &&
+    mouseY > 10 &&
+    mouseY < 50 &&
+    mouseIsPressed
+  ) {
+    start = true;
+    cJan = false;
+    cFeb = false;
+    cMar = false;
+    cApr = false;
+    cMai = false;
+    cJun = false;
+    cJul = false;
+    cAug = false;
+    cSep = false;
+    cOkt = false;
+    cNov = false;
+    cDez = false;
+  }
+}
+function cJanuar() {
+  background(255, 0, 0);
+  text("JANUAR", 150, 150);
+  start = false;
+  
+}
+function cFebruar() {
+  background(0, 255, 0);
+  text("FEBRUAR", 150, 150);
+  start = false;
+}
+function cMarz() {
+  background(0, 0, 255);
+  text("MARZ", 150, 150);
+  start = false;
+}
+function cApril() {
+  background(255, 0, 0);
+  text("April", 150, 150);
+  start = false;
+}
+function cMaiM() {
+  background(0, 255, 0);
+  text("Mai", 150, 150);
+  start = false;
+}
+function cJuni() {
+  background(0, 0, 255);
+  text("JUNI", 150, 150);
+  start = false;
+}
+function cJuli() {
+  background(255, 0, 0);
+  text("JULI", 150, 150);
+  start = false;
+}
+function cAugust() {
+  background(0, 255, 0);
+  text("AUGUST", 150, 150);
+  start = false;
+}
+function cSeptember() {
+  background(0, 0, 255);
+  text("SEPTEMBER", 150, 150);
+  start = false;
+}
+function cOktober() {
+  background(255, 0, 0);
+  text("OKTOBER", 150, 150);
+  start = false;
+}
+function cNovember() {
+  background(0, 255, 0);
+  text("NOVEMBER", 150, 150);
+  start = false;
+}
+function cDezember() {
+  background(0, 0, 255);
+  text("DEZEMBER", 150, 150);
+  start = false;
+}
 function drawFläche() {
   fill(0, 0, 0, 100);
   rect(rectX, rectY, rectWidth, rectHeight);
@@ -204,25 +452,25 @@ function drawQuad() {
 
   if (loaded1) {
     if (t1 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t1 > -10 && t1 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t1 > -5 && t1 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t1 > 0 && t1 < 5) {
-      fill(127, 255, 212);
+      fill(0, 122, 116);
     } else if (t1 > 5 && t1 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t1 > 10 && t1 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t1 > 15 && t1 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t1 > 20 && t1 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t1 > 30 && t1 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t1 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
 
@@ -230,275 +478,275 @@ function drawQuad() {
   //2
   if (loaded2) {
     if (t2 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t2 > -10 && t2 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t2 > -5 && t2 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t2 > 0 && t2 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t2 > 5 && t2 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t2 > 10 && t2 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t2 > 15 && t2 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t2 > 20 && t2 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t2 > 30 && t2 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t2 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(rectWidth * 0.584, rectY, rectWidth / 3, rectHeight / 4);
   //3
   if (loaded3) {
     if (t3 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t3 > -10 && t3 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t3 > -5 && t3 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t3 > 0 && t3 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t3 > 5 && t3 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t3 > 10 && t3 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t3 > 15 && t3 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t3 > 20 && t3 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t3 > 30 && t3 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t3 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(0.918 * rectWidth, rectY, rectWidth / 3, rectHeight / 4);
   //4
   if (loaded4) {
     if (t4 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t4 > -10 && t4 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t4 > -5 && t4 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t4 > 0 && t4 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t4 > 5 && t4 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t4 > 10 && t4 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t4 > 15 && t4 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t4 > 20 && t4 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t4 > 30 && t4 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t4 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(rectX, rectY * 4, rectWidth / 3, rectHeight / 4);
   //5
   if (loaded5) {
     if (t5 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t5 > -10 && t5 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t5 > -5 && t5 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t5 > 0 && t5 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t5 > 5 && t5 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t5 > 10 && t5 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t5 > 15 && t5 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t5 > 20 && t5 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t5 > 30 && t5 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t5 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(0.584 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4);
   //6
   if (loaded6) {
     if (t6 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t6 > -10 && t6 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t6 > -5 && t6 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t6 > 0 && t6 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t6 > 5 && t6 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t6 > 10 && t6 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t6 > 15 && t6 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t6 > 20 && t6 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t6 > 30 && t6 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t6 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(0.918 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4);
   //7
   if (loaded7) {
     if (t7 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t7 > -10 && t7 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t7 > -5 && t7 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t7 > 0 && t7 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t7 > 5 && t7 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t7 > 10 && t7 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t7 > 15 && t7 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t7 > 20 && t7 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t7 > 30 && t7 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t7 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(rectX, rectY * 7, rectWidth / 3, rectHeight / 4);
   //8
   if (loaded8) {
     if (t8 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t8 > -10 && t8 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t8 > -5 && t8 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t8 > 0 && t8 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t8 > 5 && t8 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t8 > 10 && t8 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t8 > 15 && t8 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t8 > 20 && t8 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t8 > 30 && t8 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t8 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(0.584 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4);
   //9
   if (loaded9) {
     if (t9 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t9 > -10 && t9 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t9 > -5 && t9 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t9 > 0 && t9 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t9 > 5 && t9 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t9 > 10 && t9 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t9 > 15 && t9 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t9 > 20 && t9 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t9 > 30 && t9 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t9 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(0.918 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4);
   //10
   if (loaded10) {
     if (t10 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t10 > -10 && t10 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t10 > -5 && t10 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t10 > 0 && t10 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t10 > 5 && t10 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t10 > 10 && t10 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t10 > 15 && t10 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t10 > 20 && t10 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t10 > 30 && t10 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t10 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(rectX, rectY * 10, rectWidth / 3, rectHeight / 4);
   //11
   if (loaded11) {
     if (t11 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t11 > -10 && t11 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t11 > -5 && t11 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t11 > 0 && t11 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t11 > 5 && t11 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t11 > 10 && t11 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t11 > 15 && t11 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t11 > 20 && t11 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t11 > 30 && t11 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t11 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(0.584 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4);
   //12
   if (loaded12) {
     if (t12 < -10) {
-      fill(072, 061, 139);
+      fill(121, 107, 158);
     } else if (t12 > -10 && t12 < -5) {
-      fill(0, 0, 205);
+      fill(99, 108, 146);
     } else if (t12 > -5 && t12 < 0) {
-      fill(135, 206, 250);
+      fill(106, 159, 180);
     } else if (t12 > 0 && t12 < 5) {
-      fill(127, 255, 212);
+      fill(10, 122, 116);
     } else if (t12 > 5 && t12 < 10) {
-      fill(032, 178, 170);
+      fill(119, 154, 50);
     } else if (t12 > 10 && t12 < 15) {
-      fill(154, 205, 050);
+      fill(224, 200, 21);
     } else if (t12 > 15 && t12 < 20) {
-      fill(255, 215, 0);
+      fill(255, 117, 31);
     } else if (t12 > 20 && t12 < 25) {
-      fill(255, 165, 0);
+      fill(204, 78, 0);
     } else if (t12 > 30 && t12 < 35) {
-      fill(255, 069, 0);
+      fill(175, 78, 8);
     } else if (t12 > 35) {
-      fill(255, 0, 0);
+      fill(138, 25, 42);
     }
   }
   rect(0.918 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4);
