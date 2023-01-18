@@ -1,18 +1,18 @@
 html, body {margin: 0px; padding: 0px; height: 100%; text-align: left; background-color:#F8D7C8}
 a {text-decoration: none;}
 li {list-style-type: none;}
-h1,h2,h3,a {font-family: 'urbane-rounded', sans-serif;, color: #F2856D; font-style: normal;}
+h1,h2,h3,a {font-family: 'urbane-rounded', sans-serif; color: #F2856D; font-style: normal;}
 p {font-family: 'forma-djr-micro', sans-serif; color: #F2856D}
-h1 {font-weight: 700; font-size: 70px; padding-top: 5%; margin-bottom: 20px;}
+h1 {font-weight: 900; font-size: 120px; padding-top: 5%; margin-bottom: 20px;}
 h2 {font-weight: 700; font-size: 50px; padding-top: 5%; margin-bottom: 20px;}
 h3 {font-weight: 500; font-size: 20px; padding-top: 20px; padding-top: 20px; margin-bottom: 20px;}
-p {font-weight: 300; font-size: 16px;}
+p {font-weight: 100; font-size: 16px;line-height: 1.6;}
 a {font-weight: 300; font-size: 20px;}
 
 hr {
   width: 100%;
   height: 20px;
-  background: rgb(33,122,174);
+  background: #F2856D;
   border: 0px;
   margin: 0;
 }
@@ -22,12 +22,6 @@ hr {
 
 /* hyphens */
 
-canvas {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-}
 
 /* HEADER *****************+**/
 #header {
@@ -78,21 +72,15 @@ canvas {
 
 /* WETTER IN BREMEN*****************+**/
 
-#wetter_in_bremen{
-  height: 1500px;
-  width: 100%;
-  padding-top: 100px;
-   background-color: #F8D7C8;
-}
-
-/* SLIDER *****************+**/
-* {box-sizing:border-box}
-
 
 /* PAST *****************+**/
-.past {
-  width: 100%;
-  height: 100%;
+
+#past ul li {
+  width: 50%;
+  height: auto;
+  float: left;
+  position: relative;
+  margin-left: 20%;
 }
 
 /* CURRENT *****************+**/
@@ -105,56 +93,23 @@ canvas {
   margin: 70px auto 0 auto;
 }
 
-/* INTRODUCTION*****************+**/
-
-#erklarung{
-  min-height: 500px;
-background-color: #C9EBFF;
-}
-
-#erklarung-bild{
-  float: left;
-  width: 20%;
-  padding-right: 20%;
-  border-radius: 25px;
-}
-
-#erklarung-bild img{
-  width: 400px;
-  padding-left: 0;
-}
-
-#erklarung-text, #erklarung-text2{
-  float: left;
-  width: 35%;
-  height: 500px;
-  padding-left: 5%;
-}
-
-#erklarung-text, #erklarung-text2 p{
-  padding-top: 20px;
-  float: left;
-  text-align: left;
-}
-
-
 /* ÜBER UNS*****************+**/
 
 #uber_uns {
   min-height: 250px;
   padding-bottom: 70px;
+  padding-left: 15%;
 }
 
-#uber_uns img{
-  width: 800px;
-  padding-top: 100px;
-  padding-left: 0;
+#uber_uns h3{
+  width: 70%;
 }
 
 #uber_uns-body {
   width: 100%;
   padding-left: 20%;
   padding-right: 20%;
+  padding-top: 20px;
   margin: auto;
 }
 
@@ -164,21 +119,15 @@ background-color: #C9EBFF;
   height: 500px;
 }
 
-#uber_uns-body-text p {
-  text-align: left;
-  line-height: 1.6;
-}
-
 /* SHOP *****************+**/
 #shoptitle {
   min-height: 250px;
   padding-bottom: 70px;
+  padding-left: 15%;
 }
 
-#shoptitle img{
-  width: 800px;
-  padding-top: 100px;
-  padding-left: 0;
+#shoptitle h3{
+  width: 70%;
 }
 
 .shop {
@@ -190,7 +139,8 @@ background-color: #C9EBFF;
 
 .shop tr{
   border: 200px;
-  border-color: rgb(33,122,174);
+  border-color: #F2856D;
+  background-color: #FFFFFF;
 }
 
 /* FOOTER *****************+**/
