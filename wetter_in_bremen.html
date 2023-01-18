@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Colorlender</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://use.typekit.net/pfl4wza.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/pfl4wza.css">
+
 
     <!-- HEADER -->
     <header id="header">
       <div id="logo">
-           <a href="wetter_in_bremen.html">colorlander</a>
+           <a href="wetter_in_bremen.html">colorlendar</a>
       </div>
       <nav id="main-nav">
           <ul>
@@ -28,85 +28,17 @@
 <section id="wetter_in_bremen">
     <!-- Slideshow container -->
   <div class="past">
-      <script src="sketch.js"></script>
+    <script src="sketch.js"></script>
     </div>
 
-   <!-- <div class="slideshow-container">
-
-     Full-width images with number and caption text
-    <div class="mySlides fade">
-      <img src="img/example_2.jpg" style="width:35%">
-    </div>
-
-    <div class="mySlides fade">
-      <img src="img/example_2.jpg" style="width:35%">
-    </div>
-
-    <div class="mySlides fade">
-      <img src="img/example_3.jpg" style="width:35%">
-    </div>
-    <div class="slidecontainer">
-      <h1><span id="demo"></span></h1>
-      <input type="range" min="1970" max="2020" value="50" class="slider" id="myRange">
-    </div>
-</div>-->
-
-<div class="current">
-  <!-- <img src="img/example_1.jpg" style="width:50%">-->
-  <iframe src="https://editor.p5js.org/RafiRayRay/full/gzfU2xs_r"width="400px" height="650px"></iframe>
-</div>
 </section>
 
-  <!--INTRODUCTION -->
-
-
-<script type="text/javascript">
-  let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-</script>
-<script type="text/javascript">
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-</script>
-
-    <!--FOOTER -->
+    <!--FOOTER
     <footer>
       <div class="footer">
 <p>2022 &copy; | Yougin Kim & Ulad Karotki & Rafael Gassmann & Femke Wöhler | Hochschule für Künste Bremen & Universität Bremen | <a href="impressum.html">Impressum</a></p>
       </div>
 
-    </footer>
+    </footer>-->
     </body>
 </html>
