@@ -71,26 +71,16 @@ hr {
 }
 
 /* WETTER IN BREMEN*****************+**/
-
-
-/* PAST *****************+**/
-
-#past ul li {
-  width: 50%;
-  height: auto;
-  float: left;
-  position: relative;
-  margin-left: 20%;
+#wetter_in_bremen{
+  margin-top: 100px;
+  width: 100%;
+  height: 700px;
 }
 
-/* CURRENT *****************+**/
-
-.current {
-  float: left;
-  width: 50%;
-  height: 300px;
-  position: relative;
-  margin: 70px auto 0 auto;
+canvas {
+    position: absolute;
+    left: 20%;
+    top: 150px;
 }
 
 /* ÜBER UNS*****************+**/
