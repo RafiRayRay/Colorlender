@@ -100,12 +100,12 @@ function setup() {
   createCanvas(canvasWidth, canvasHeight);
   // Erstelle Slider für das Jahr, den Monat und das Datum
   jahrSlider = createSlider(2010, 2022, 2022);
-  jahrSlider.position(width * 0.2, height * 0.88);
+  jahrSlider.position(width * 0.52, height * 1.15);
   jahrSlider.style("width", "80px");
  laden();
   // Erstelle den Button
   button = createButton("generieren");
-  button.position( width * 0.19, height * 0.91);
+  button.position( width * 0.51, height * 1.2);
   button.size(100, 50);
 
   // Füge einen Klick-Handler hinzu
@@ -300,7 +300,10 @@ function draw() {
   // Aktualisiere die Werte der Variablen "year", "month" und "date"
   // entsprechend den Werten der Slider
   print(mouseX, mouseY, start);
-  text("2022", width *0.8, height * 0.88);
+  fill(242,133,109);
+  textSize (120);
+
+  text("2022", width *0.645, height * 0.98);
 
   jahr = jahrSlider.value();
   /*
@@ -324,9 +327,9 @@ fill(248,215,200);
   rect(925,-100,1000,1000);
  pop();
   //Die Werte von den Slidern
-  fill(111);
+  fill(242,133,109)
   textSize(28);
-  text(jahr, width * 0.22, height * 0.88);
+  text(jahr, width * 0.195, height * 0.88);
   text(monat, width - width * 0.8, height * 0.91);
   text(tag, width - width * 0.8, height * 0.93);
   print("datum " + j, m, t);
@@ -509,7 +512,7 @@ function cJanuar() {
   background(255, 0, 0);
   text("JANUAR", 150, 150);
   start = false;
-  
+
 }
 function cFebruar() {
   background(0, 255, 0);
