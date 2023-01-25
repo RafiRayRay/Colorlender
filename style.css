@@ -17,7 +17,7 @@ hr {
   margin: 0;
 }
 
- #logo, #logo img, #header, li, #slider img, #packages, #packages img {transition: all 300ms; -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms;}
+ #logo, #logo img, #header, li, #main-nav, #main-nav img {transition: all 300ms; -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms;}
 
 
 /* hyphens */
@@ -26,28 +26,41 @@ hr {
 /* HEADER *****************+**/
 #header {
   width: 100%;
-  height: 100px;
+  height: 160px;
   position: absolute;
   top: 0;
   left: 0;
- background-color: #FFF1EB;
+ background-image: linear-gradient(#FFF,#F8D7C8);
 }
 
-#logo a{
+#logo img{
+  height: 80px;
   float: left;
-  font-size: 30px;
-  font-weight: bold;
-  margin: 30px 100px 10px 100px;
-  color: #F2856D
+  margin: 25px 100px 10px 100px;
 }
 
-#header:hover {
-  opacity: 1;
+#logo img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 #main-nav {
   float: right;
 }
+
+#main-nav img{
+  height: 70px;
+}
+
+#main-nav img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
 #header nav {
   margin: 10px 100px 0 0;
 }
@@ -60,14 +73,6 @@ hr {
 
 #header nav ul li a{
   color: #F2856D
-}
-
-#header nav ul li a:hover {
-  color: #FFFFFF;
-}
-
-#logo a:hover {
-  color: #FFFFFF;
 }
 
 /* WETTER IN BREMEN*****************+**/
@@ -135,21 +140,19 @@ canvas {
 
 /* FOOTER *****************+**/
 .footer {
-  height: 70px;
+  height: 80px;
   bottom: 0;
   width: 100%;
-  background-color: #F2856D;
+  background-image: linear-gradient(#F8D7C8, #FFF);
 }
 
 .footer p {
-  color: #FFFFFF;
   font-size: 12px;
 margin-right: 25%;
 margin-left: 5%;
-padding-top: 20px;
+padding-top: 30px;
 }
 
 .footer a {
   font-size: 12px;
-  color: #FFFFFF
 }

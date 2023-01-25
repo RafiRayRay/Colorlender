@@ -105,6 +105,7 @@ function setup() {
  laden();
   // Erstelle den Button
   button = createButton("generieren");
+  button.style('background-color', color(242,133,109));
   button.position( width * 0.51, height * 1.2);
   button.size(100, 50);
 
@@ -302,7 +303,6 @@ function draw() {
   print(mouseX, mouseY, start);
   fill(242,133,109);
   textSize (120);
-
   text("2022", width *0.645, height * 0.98);
 
   jahr = jahrSlider.value();
@@ -314,6 +314,7 @@ function draw() {
   if (start == true) {
     drawQuad(); //Die Quadrate (3x4)
   }
+
 fill(111);
   textSize(28);
   text(johr, width *0.43, height * 0.88);
@@ -576,7 +577,6 @@ function drawFläche() {
 function drawQuad() {
    // Zeichne die Quadrate
   //1
-
   if (luden1) {
     if (p1 < -10) {
       fill(121, 107, 158);
@@ -601,7 +601,7 @@ fill(106, 159, 180);
     }
   }
 
-  rect(Fink, Starr, Fink*1.16, Drossel / 4);
+  rect(Fink, Starr, Fink*1.16, Drossel / 4, 15);
   //2
   if (luden2) {
     if (p2 < -10) {
@@ -625,7 +625,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink*1.16, Starr, Fink *1.32, Drossel / 4);
+  rect(Fink*1.16, Starr, Fink *1.32, Drossel / 4, 15);
   //3
   if (luden3) {
     if (p3 < -10) {
@@ -649,7 +649,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink*1.32, Starr,Fink*1.48, Drossel / 4);
+  rect(Fink*1.32, Starr,Fink*1.48, Drossel / 4,15);
   //4
   if (luden4) {
     if (p4 < -10) {
@@ -673,7 +673,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink, Starr * 4, Fink*1.16, Drossel / 4);
+  rect(Fink, Starr * 4, Fink*1.16, Drossel / 4,15);
   //5
   if (luden5) {
     if (p5 < -10) {
@@ -697,7 +697,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink*1.16, Starr * 4, Fink*1.32, Drossel / 4);
+  rect(Fink*1.16, Starr * 4, Fink*1.32, Drossel / 4,15);
   //6
   if (luden6) {
     if (p6 < -10) {
@@ -721,7 +721,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink*1.32, Starr * 4, Fink*1.48, Drossel / 4);
+  rect(Fink*1.32, Starr * 4, Fink*1.48, Drossel / 4,15);
   //7
   if (luden7) {
     if (p7 < -10) {
@@ -745,7 +745,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink, Starr * 7, Fink*1.16, Drossel / 4);
+  rect(Fink, Starr * 7, Fink*1.16, Drossel / 4,15);
   //8
   if (luden8) {
     if (p8 < -10) {
@@ -769,7 +769,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink*1.16, Starr * 7, Fink*1.32, Drossel / 4);
+  rect(Fink*1.16, Starr * 7, Fink*1.32, Drossel / 4,15);
   //9
   if (luden9) {
     if (p9 < -10) {
@@ -793,7 +793,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink*1.32, Starr * 7, Fink*1.48, Drossel / 4);
+  rect(Fink*1.32, Starr * 7, Fink*1.48, Drossel / 4,15);
   //10
   if (luden10) {
     if (p10 < -10) {
@@ -817,7 +817,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink, Starr * 10, Fink*1.16, Drossel / 4);
+  rect(Fink, Starr * 10, Fink*1.16, Drossel / 4,15);
   //11
   if (luden11) {
     if (p11 < -10) {
@@ -841,7 +841,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink*1.16, Starr * 10, Fink*1.32, Drossel / 4);
+  rect(Fink*1.16, Starr * 10, Fink*1.32, Drossel / 4,15);
   //12
   if (luden12) {
     if (p12 < -10) {
@@ -865,7 +865,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(Fink*1.32, Starr * 10, Fink*1.48, Drossel / 4);
+  rect(Fink*1.32, Starr * 10, Fink*1.48, Drossel / 4,15);
 
 
   // Zeichne die Quadrate
@@ -894,8 +894,9 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-
-  rect(rectX, rectY, rectWidth / 3, rectHeight / 4);
+strokeWeight(4);
+stroke(248,215,200)
+  rect(rectX, rectY, rectWidth / 3, rectHeight / 4, 15);
   //2
   if (loaded2) {
     if (t2 < -10) {
@@ -920,7 +921,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(rectWidth * 0.584, rectY, rectWidth / 3, rectHeight / 4);
+  rect(rectWidth * 0.584, rectY, rectWidth / 3, rectHeight / 4, 15);
   //3
   if (loaded3) {
     if (t3 < -10) {
@@ -945,7 +946,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(0.918 * rectWidth, rectY, rectWidth / 3, rectHeight / 4);
+  rect(0.918 * rectWidth, rectY, rectWidth / 3, rectHeight / 4, 15);
   //4
   if (loaded4) {
     if (t4 < -10) {
@@ -970,7 +971,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(rectX, rectY * 4, rectWidth / 3, rectHeight / 4);
+  rect(rectX, rectY * 4, rectWidth / 3, rectHeight / 4, 15);
   //5
   if (loaded5) {
     if (t5 < -10) {
@@ -995,7 +996,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(0.584 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4);
+  rect(0.584 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4, 15);
   //6
   if (loaded6) {
     if (t6 < -10) {
@@ -1020,7 +1021,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(0.918 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4);
+  rect(0.918 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4, 15);
   //7
   if (loaded7) {
     if (t7 < -10) {
@@ -1045,7 +1046,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(rectX, rectY * 7, rectWidth / 3, rectHeight / 4);
+  rect(rectX, rectY * 7, rectWidth / 3, rectHeight / 4, 15);
   //8
   if (loaded8) {
     if (t8 < -10) {
@@ -1070,7 +1071,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(0.584 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4);
+  rect(0.584 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4, 15);
   //9
   if (loaded9) {
     if (t9 < -10) {
@@ -1095,7 +1096,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(0.918 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4);
+  rect(0.918 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4, 15);
   //10
   if (loaded10) {
     if (t10 < -10) {
@@ -1120,7 +1121,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(rectX, rectY * 10, rectWidth / 3, rectHeight / 4);
+  rect(rectX, rectY * 10, rectWidth / 3, rectHeight / 4, 15);
   //11
   if (loaded11) {
     if (t11 < -10) {
@@ -1145,7 +1146,7 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(0.584 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4);
+  rect(0.584 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4, 15);
   //12
   if (loaded12) {
     if (t12 < -10) {
@@ -1170,5 +1171,5 @@ fill(106, 159, 180);
       fill(138, 25, 42);
     }
   }
-  rect(0.918 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4);
+  rect(0.918 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4, 15);
 }
