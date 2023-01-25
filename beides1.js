@@ -896,7 +896,7 @@ fill(106, 159, 180);
   }
 strokeWeight(4);
 stroke(248,215,200)
-  rect(rectX, rectY, rectWidth / 3, rectHeight / 4, 15);
+  rect(rectX, rectY, rectWidth / 3, rectHeight / 4, 20);
   //2
   if (loaded2) {
     if (t2 < -10) {
@@ -921,7 +921,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(rectWidth * 0.584, rectY, rectWidth / 3, rectHeight / 4, 15);
+  rect(rectWidth * 0.584, rectY, rectWidth / 3, rectHeight / 4, 20);
   //3
   if (loaded3) {
     if (t3 < -10) {
@@ -946,7 +946,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(0.918 * rectWidth, rectY, rectWidth / 3, rectHeight / 4, 15);
+  rect(0.918 * rectWidth, rectY, rectWidth / 3, rectHeight / 4, 20);
   //4
   if (loaded4) {
     if (t4 < -10) {
@@ -971,7 +971,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(rectX, rectY * 4, rectWidth / 3, rectHeight / 4, 15);
+  rect(rectX, rectY * 4, rectWidth / 3, rectHeight / 4, 20);
   //5
   if (loaded5) {
     if (t5 < -10) {
@@ -996,7 +996,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(0.584 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4, 15);
+  rect(0.584 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4, 20);
   //6
   if (loaded6) {
     if (t6 < -10) {
@@ -1021,7 +1021,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(0.918 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4, 15);
+  rect(0.918 * rectWidth, rectY * 4, rectWidth / 3, rectHeight / 4, 20);
   //7
   if (loaded7) {
     if (t7 < -10) {
@@ -1046,7 +1046,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(rectX, rectY * 7, rectWidth / 3, rectHeight / 4, 15);
+  rect(rectX, rectY * 7, rectWidth / 3, rectHeight / 4, 20);
   //8
   if (loaded8) {
     if (t8 < -10) {
@@ -1071,7 +1071,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(0.584 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4, 15);
+  rect(0.584 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4, 20);
   //9
   if (loaded9) {
     if (t9 < -10) {
@@ -1096,7 +1096,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(0.918 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4, 15);
+  rect(0.918 * rectWidth, rectY * 7, rectWidth / 3, rectHeight / 4, 20);
   //10
   if (loaded10) {
     if (t10 < -10) {
@@ -1121,7 +1121,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(rectX, rectY * 10, rectWidth / 3, rectHeight / 4, 15);
+  rect(rectX, rectY * 10, rectWidth / 3, rectHeight / 4, 20);
   //11
   if (loaded11) {
     if (t11 < -10) {
@@ -1146,7 +1146,7 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(0.584 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4, 15);
+  rect(0.584 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4, 20);
   //12
   if (loaded12) {
     if (t12 < -10) {
@@ -1171,5 +1171,5 @@ stroke(248,215,200)
       fill(138, 25, 42);
     }
   }
-  rect(0.918 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4, 15);
+  rect(0.918 * rectWidth, rectY * 10, rectWidth / 3, rectHeight / 4, 20);
 }
