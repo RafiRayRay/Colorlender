@@ -81,22 +81,28 @@ hr {
   width: 100%;
   height: 700px;
 }
+.section1{
+  width: 100%;
+}
 
 .text1{
+  display: inline-block;
   width: 35%;
-  margin-left: 15%;
+  margin-left: 10%;
   margin-top: 150px;
   height: 200px;
 }
 
 .foto1 {
-  margin-right: 15%;
-  margin-top: 150px;
+  vertical-align:top;
+    display: inline-block;
+  width: 35%;
+  margin-top: 170px;
+  margin-left: 7%;
 }
 
 .foto1 img{
-  width: 25%;
-
+  width: 100%;
   height: auto;
 }
 
