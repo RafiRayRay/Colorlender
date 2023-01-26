@@ -104,10 +104,10 @@ function setup() {
   jahrSlider.style("width", "80px");
  laden();
   // Erstelle den Button
-  button = createButton("generieren");
+  button = createButton("colorlendarisieren");
   button.style('background-color', color(242,133,109));
-  button.position( width * 0.51, height * 1.2);
-  button.size(100, 50);
+  button.position( width * 0.50, height * 1.2);
+  button.size(120, 50,15);
 
   // Füge einen Klick-Handler hinzu
   button.mousePressed(buttonPressed);

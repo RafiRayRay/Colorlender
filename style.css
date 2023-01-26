@@ -82,10 +82,35 @@ hr {
   height: 700px;
 }
 
+.text1{
+  width: 35%;
+  margin-left: 15%;
+  margin-top: 150px;
+  height: 200px;
+}
+
+.foto1 {
+  margin-right: 15%;
+  margin-top: 150px;
+}
+
+.foto1 img{
+  width: 25%;
+
+  height: auto;
+}
+
+/* WETTERANALYSE*****************+**/
+
 canvas {
     position: absolute;
     left: 20%;
     top: 150px;
+}
+
+.platzhalter{
+  height: 200px;
+  width: 100%;
 }
 
 /* ÜBER UNS*****************+**/
