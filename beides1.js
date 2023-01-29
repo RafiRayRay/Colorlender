@@ -97,16 +97,16 @@ let dezember;
 function setup() {
   // lade die JSON-Datei beim Start des Programms
   // brigthsky = loadJSON(url,buttonPressed);
-  createCanvas(canvasWidth, canvasHeight);
+  let canvas = createCanvas(canvasWidth, canvasHeight);
   // Erstelle Slider für das Jahr, den Monat und das Datum
   jahrSlider = createSlider(2010, 2022, 2022);
-  jahrSlider.position(width * 0.52, height * 1.15);
+  jahrSlider.position(width * 0.52, height * 1.31);
   jahrSlider.style("width", "80px");
  laden();
   // Erstelle den Button
   button = createButton("colorlendarisieren");
   button.style('background-color', color(242,133,109));
-  button.position( width * 0.50, height * 1.2);
+  button.position( width * 0.50, height * 1.35);
   button.size(120, 50,15);
 
   // Füge einen Klick-Handler hinzu
