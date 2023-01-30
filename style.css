@@ -1,7 +1,7 @@
-html, body {margin: 0px; padding: 0px; height: 100%; text-align: left; background-color:#F2856D}
+html, body {margin: 0px; padding: 0px; height: 100%; text-align: left; background-color:#F5F5F5}
 a {text-decoration: none;}
 li {list-style-type: none;}
-h1,h2,h3,a {font-family: 'urbane-rounded', sans-serif; color: #525252; font-style: normal;}
+h1,h2,h3,a {font-family: 'urbane-rounded', sans-serif; color:#F2856D; font-style: normal;}
 p {font-family: 'forma-djr-micro', sans-serif; color: #525252}
 h1 {font-weight: 900; font-size: 120px; padding-top: 5%; margin-bottom: 20px;}
 h2 {font-weight: 700; font-size: 70px; margin-top: 100px;}
@@ -18,7 +18,7 @@ hr {
   margin-bottom: 20px;
 }
 
- #logo, #logo img, #header, li, #main-nav, #main-nav img {transition: all 300ms; -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms;}
+ #logo, #logo img, #header, li, #main-nav, #main-nav img, .text1 h2, .text2 h2, .text3 h2 {transition: all 300ms; -webkit-transition: all 300ms; -moz-transition: all 300ms; -o-transition: all 300ms;}
 
 
 /* hyphens */
@@ -72,10 +72,6 @@ hr {
   margin-top: 5px;
 }
 
-#header nav ul li a{
-  color: #F2856D
-}
-
 /* WETTER IN BREMEN*****************+**/
 #wetter_in_bremen{
   margin-top: 100px;
@@ -105,7 +101,15 @@ hr {
   width: 35%;
   margin-left: 10%;
   margin-top: 150px;
-  height: 200px;
+  padding-left: 10px;
+  height: 435px;
+}
+
+.text1 h2:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .foto1 {
@@ -135,6 +139,13 @@ hr {
   height: 200px;
 }
 
+.text2 h2:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
 .foto2 {
   vertical-align:top;
   display: inline-block;
@@ -158,6 +169,13 @@ hr {
   text-align: left;
   margin-left: 32.5%;
   width: 35%;
+}
+
+.text3 h2:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .foto3 {
