@@ -6,18 +6,18 @@ var startYear = 1890;
 var endYear = 2021;
 
 function preload() {
-  loadTable("Bremen_KlimaH.csv", "csv", "header", (data) => {
+  loadTable("assetsCLIMA/Bremen_KlimaH.csv", "csv", "header", (data) => {
             temperatureData = data;
         });
-  fredoka = loadFont('assets/fredoka.ttf');
-  
+  fredoka = loadFont('assetsCLIMA/fredoka.ttf');
+
 }
 
 function setup() {
-  
+
    createCanvas(12 * w, (endYear - startYear + 1) * h);
     noStroke();
-  
+
    if(temperatureData){
     for (var y = startYear; y <= endYear; y++) {
         for (var x = 0; x < 12; x++) {
@@ -26,7 +26,7 @@ function setup() {
                     return row.getString('date') === `15.${month}.${y}`});
         if(selectedData){
             let temperature = selectedData.getNum("temp");
-          
+
               if (temperature <= -10) {
        fill(121, 107, 158);
     } else if (temperature > -10 && temperature <= -5) {
@@ -48,14 +48,14 @@ function setup() {
     } else if (temperature > 35) {
        fill(138, 25, 42);
     }
-          
+
             rect(x * w, (y - startYear) * h, w, h);
-            
+
         }
         }
     }
 }
-  
+
 for (var i = 1890; i <= 2022; i++) {
   fill(255,114,86);
   textFont(fredoka);
@@ -65,7 +65,6 @@ for (var i = 1890; i <= 2022; i++) {
 }
 }
 function draw(){
- 
+
 
 }
-
