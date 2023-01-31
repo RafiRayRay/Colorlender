@@ -79,18 +79,6 @@ hr {
   height: 700px;
 }
 
-.graphics {
-  height: 40px;
-  width: auto;
-}
-
-.graphics img {
-  margin-top: 10px;
-  height: 320px;
-  width: auto;
-  margin-left: 86%;
-}
-
 .section1{
   margin-top: 100px;
   width: 100%;
@@ -180,14 +168,12 @@ hr {
 
 .foto3 {
   float: none;
-  width: 70%;
+  width: 60%;
   margin: auto auto 0 auto;
 }
 
-.foto3 tr{
-  border: 200px;
-  border-color: #F2856D;
-  background-color: #FFFFFF;
+.foto3 tr img{
+  background-color: #F5f5f5;
 }
 
 /* WETTERANALYSE*****************+**/
@@ -210,11 +196,49 @@ canvas {
 }
 
 /* CLIMALENDAR*****************+**/
-
 #climalendar{
-  margin-top: 100px;
   width: 100%;
-  height: 700px;
+  height: 8220px;
+}
+
+.climalendartitel{
+  margin-top: 150px;
+  background-color: #f5f5f5;
+  height: 350px;
+}
+
+.climalendartitel h1{
+  margin-left: 10%;
+}
+
+.climalendartitel h3{
+  margin-left: 21%;
+}
+
+.climalendarframe iframe{
+  margin-top: 458px;
+  margin-left: 10%;
+  width: 720px;
+  height: 8220px;
+}
+
+.climalendartext{
+  display: inline-block;
+  vertical-align:top;
+  width: 35%;
+  margin-left: 5%;
+  margin-top: 450px;
+  height: 7000px;
+}
+
+.climalendartext h2 {
+  padding-left: 10%;
+
+}
+
+.climalendartext p {
+  padding-left: 10%;
+  padding-right: 5%;
 }
 
 /* ÜBER UNS*****************+**/
