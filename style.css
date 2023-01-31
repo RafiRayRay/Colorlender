@@ -182,12 +182,6 @@ hr {
 }
 
 /* WETTERANALYSE*****************+**/
-#colorlendar {
-  display: inline-block;
-  width: 50%;
-  height:auto;
-}
-
 .colorlendartitel{
   margin-top: 150px;
   background-color: #f5f5f5;
@@ -202,6 +196,20 @@ hr {
   margin-left: 21%;
 }
 
+.colorlendarecken {
+  width: 900px;
+  height: 30px;
+  margin: -12px auto 0;
+  background-color: #F3D9CA;
+  border-radius: 25px;
+}
+
+#colorlendarcode iframe{
+  border-radius: 25px;
+  margin: 460px auto 0;
+  display: block;
+}
+
 
 canvas {
   margin-top: 250px;
@@ -214,11 +222,10 @@ canvas {
 #colorlendarerklarung {
   display: inline-block;
   width: 100%;
-  height:auto;
 }
 
 .colorlendartext {
-  margin-top: 300px;
+  margin-top: 30px;
   display: inline-block;
   height: 500px;
   width: 50%;
@@ -236,13 +243,14 @@ canvas {
 }
 
 .colorlendarfoto {
-  margin-top: 450px;
+  margin-top: 80px;
   vertical-align:top;
   display: inline-block;
   width: 35%;
 }
 
 .colorlendarfoto img{
+  margin: 20px;
   width: 100%;
   height: auto;
   border-radius: 25px;
