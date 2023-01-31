@@ -176,25 +176,77 @@ hr {
   background-color: #F5f5f5;
 }
 
+.platzhalter{
+  height: 200px;
+  width: 100%;
+}
+
 /* WETTERANALYSE*****************+**/
 #colorlendar {
+  display: inline-block;
   width: 50%;
   height:auto;
 }
 
+.colorlendartitel{
+  margin-top: 150px;
+  background-color: #f5f5f5;
+  height: 350px;
+}
+
+.colorlendartitel h1{
+  margin-left: 10%;
+}
+
+.colorlendartitel h3{
+  margin-left: 21%;
+}
+
 
 canvas {
+  margin-top: 250px;
     position: absolute;
     left: 20%;
     top: 250px;
     border-radius: 25px;
 }
 
-.platzhalter{
-  height: 200px;
+#colorlendarerklarung {
+  display: inline-block;
   width: 100%;
+  height:auto;
 }
 
+.colorlendartext {
+  margin-top: 300px;
+  display: inline-block;
+  height: 500px;
+  width: 50%;
+}
+
+
+.colorlendartext h2{
+  margin-left: 20%;
+}
+
+.colorlendartext p{
+  margin-left: 20%;
+  margin-right: 5%;
+  width: 75%;
+}
+
+.colorlendarfoto {
+  margin-top: 450px;
+  vertical-align:top;
+  display: inline-block;
+  width: 35%;
+}
+
+.colorlendarfoto img{
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
 /* CLIMALENDAR*****************+**/
 #climalendar{
   width: 100%;
@@ -239,6 +291,12 @@ canvas {
 .climalendartext p {
   padding-left: 10%;
   padding-right: 5%;
+}
+
+.climalendartext img {
+  width: 600px;
+  height: auto;
+  border-radius: 25px;
 }
 
 /* ÜBER UNS*****************+**/

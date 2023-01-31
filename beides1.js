@@ -100,13 +100,13 @@ function setup() {
   let canvas = createCanvas(canvasWidth, canvasHeight);
   // Erstelle Slider für das Jahr, den Monat und das Datum
   jahrSlider = createSlider(2010, 2022, 2022);
-  jahrSlider.position(width * 0.52, height * 1.31);
+  jahrSlider.position(width * 0.52, height * 1.74);
   jahrSlider.style("width", "80px");
  laden();
   // Erstelle den Button
   button = createButton("colorlendarisieren");
   button.style('background-color', color(242,133,109));
-  button.position( width * 0.50, height * 1.35);
+  button.position( width * 0.77, height * 1.63);
   button.size(120, 50,15);
 
   // Füge einen Klick-Handler hinzu
